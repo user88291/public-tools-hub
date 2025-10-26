@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Uptime Checker — Public Tools Hub</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Uptime Checker</h1>
+      <nav><a href="../index.html">Home</a></nav>
+    </header>
+
+    <main class="card" id="uptime-tool">
+      <div class="tool">
+        <div class="row">
+          <input id="uptime-url" class="input" placeholder="https://example.com" />
+          <button id="uptime-check" class="btn">Check</button>
+        </div>
+
+        <div class="row">
+          <label for="uptime-proxy">Serverless proxy (optional)</label>
+          <input id="uptime-proxy" class="input" placeholder="https://your-proxy.example.com/ping" />
+        </div>
+
+        <div class="row">
+          <label for="uptime-timeout">Timeout (ms)</label>
+          <input id="uptime-timeout" class="input" type="number" value="8000" />
+          <small style="color:var(--muted)">If the target blocks CORS, provide a proxy endpoint that accepts ?url=... and returns JSON.</small>
+        </div>
+
+        <div>
+          <label>Result</label>
+          <div id="uptime-result" class="output">No check yet</div>
+        </div>
+
+        <div style="margin-top:12px">
+          <label>Recent checks</label>
+          <div id="uptime-history" class="uptime-list output">No recent checks</div>
+        </div>
+      </div>
+    </main>
+
+    <footer style="text-align:center;margin-top:18px;color:var(--muted)">Public Tools Hub</footer>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/uptime.js"></script>
+</body>
+</html>

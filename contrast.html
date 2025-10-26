@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contrast Checker — Public Tools Hub</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Colour Contrast Checker</h1>
+      <nav><a href="../index.html">Home</a></nav>
+    </header>
+
+    <main class="card" id="contrast-tool">
+      <div class="tool">
+        <div class="row">
+          <div class="col" style="flex:1">
+            <label for="contrast-fg">Foreground colour</label>
+            <input id="contrast-fg" class="input" placeholder="#000000 or rgb(0,0,0)" />
+          </div>
+          <div class="col" style="flex:1">
+            <label for="contrast-bg">Background colour</label>
+            <input id="contrast-bg" class="input" placeholder="#ffffff or rgb(255,255,255)" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Ratio</label>
+            <div id="contrast-ratio" class="output">—</div>
+          </div>
+          <div style="flex:1">
+            <label>WCAG AA / AAA</label>
+            <div id="contrast-aa" class="output">—</div>
+            <div id="contrast-aaa" class="output" style="margin-top:6px">—</div>
+          </div>
+        </div>
+
+        <div class="contrast-result">
+          <div class="swatch" id="contrast-sample" style="display:flex;align-items:center;justify-content:center">Aa</div>
+          <div style="flex:1">
+            <small>Use hex (#RRGGBB) or rgb(r,g,b). The checker reports contrast ratio and AA/AAA pass/fail for normal and large text.</small>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer style="text-align:center;margin-top:18px;color:var(--muted)">Public Tools Hub</footer>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/contrast.js"></script>
+</body>
+</html>

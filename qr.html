@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QR Generator — Public Tools Hub</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>QR Generator</h1>
+      <nav><a href="../index.html">Home</a></nav>
+    </header>
+
+    <main class="card" id="qr-tool">
+      <div class="tool">
+        <div class="row">
+          <label for="qr-text">Text or URL</label>
+        </div>
+        <textarea id="qr-text" class="input" rows="3" placeholder="https://example.com"></textarea>
+
+        <div class="row">
+          <label for="qr-size">Size</label>
+          <select id="qr-size" class="select">
+            <option value="128">128</option>
+            <option value="256" selected>256</option>
+            <option value="512">512</option>
+          </select>
+
+          <label for="qr-ec">Error correction</label>
+          <select id="qr-ec" class="select">
+            <option value="L">L (low)</option>
+            <option value="M" selected>M (medium)</option>
+            <option value="Q">Q (quartile)</option>
+            <option value="H">H (high)</option>
+          </select>
+
+          <button id="qr-download" class="btn">Download PNG</button>
+        </div>
+
+        <div id="qr-preview" class="qr-wrap output" aria-live="polite">Preview</div>
+
+        <small>Tip: include full URL (https://) for best results. If a QR library is not present, the tool falls back to an external image generator.</small>
+      </div>
+    </main>
+
+    <footer style="text-align:center;margin-top:18px;color:var(--muted)">Public Tools Hub</footer>
+  </div>
+
+  <!-- Optional: include vendor/qrcode.min.js if you have it locally -->
+  <script src="../vendor/qrcode.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/qr.js"></script>
+</body>
+</html>

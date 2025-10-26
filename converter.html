@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unit Converter — Public Tools Hub</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Unit Converter</h1>
+      <nav><a href="../index.html">Home</a></nav>
+    </header>
+
+    <main class="card" id="converter">
+      <div class="toolbar">
+        <select id="conv-category" class="select"></select>
+        <select id="conv-from" class="select"></select>
+        <select id="conv-to" class="select"></select>
+        <input id="conv-value" class="input" type="number" step="any" />
+        <button id="conv-copy" class="btn">Copy</button>
+      </div>
+
+      <div class="tool">
+        <label>Result</label>
+        <div id="conv-output" class="output" aria-live="polite">—</div>
+        <small>Supports length, mass, time, data (binary), and temperature.</small>
+      </div>
+    </main>
+
+    <footer style="text-align:center;margin-top:18px;color:var(--muted)">Public Tools Hub</footer>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/converter.js"></script>
+</body>
+</html>

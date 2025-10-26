@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Markdown Preview — Public Tools Hub</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Markdown Preview</h1>
+      <nav><a href="../index.html">Home</a></nav>
+    </header>
+
+    <main class="card" id="markdown-tool">
+      <div class="toolbar">
+        <button id="md-download" class="btn">Download HTML</button>
+        <small style="color:var(--muted)">Using marked.js if available; otherwise a basic fallback renderer.</small>
+      </div>
+
+      <div class="split tool">
+        <div>
+          <label for="md-input">Markdown</label>
+          <textarea id="md-input" placeholder="# Hello\n\nType markdown here..."></textarea>
+        </div>
+        <div>
+          <label>Preview</label>
+          <div id="md-preview" class="output" style="min-height:200px;overflow:auto"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer style="text-align:center;margin-top:18px;color:var(--muted)">Public Tools Hub</footer>
+  </div>
+
+  <!-- Optional: include vendor/marked.min.js -->
+  <script src="../vendor/marked.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/markdown.js"></script>
+</body>
+</html>
