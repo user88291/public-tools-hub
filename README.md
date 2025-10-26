@@ -1,0 +1,2 @@
+README: Public Tools Hub
+In order for this program to work, you must download all the .html files. Place all of the .html documents (except index.html) into a folder named 'tools', and then place the index.html file in the parent directory of the tools folder. Note that these programs may not work as expected. The QR generator currently does not work (probably due to a coding error) however this cannot be diagnosed/fixed.
